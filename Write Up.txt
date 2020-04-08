@@ -1,0 +1,25 @@
+JSDDOS
+
+DDoS merupakan tipe serangan dengan teknik membanjiri / flooding kepada target. Analognya jika saya melempar batu ke rumah orang mungkin akan di tangkis kemudian di kembalikan lagi oleh penjaga rumah ( System ) tapi, jika saya menyerang dengan ribuan batu apa yang terjadi pada rumah tersebut apakah penjaga ( System ) dapat tetap menjaga dengan stabil ? Tentu tidak.
+
+Kali ini saya membuat tools DDoS menggunakan JavaScript yang di eksekusi di dalam HTML. Saya akan menjelaskan bagaimana tools ini bekerja.
+
+Penjelasan kode JavaScript
+
+1. function flood(xurl,total) adalah code untuk membuat function flood degan parameter xurl dan total
+
+2. for(i=0;i<total;i++) adalah kode untuk looping ( pengulangan ) yang di ulangi dari value parameter total
+
+3. fetch(xurl,{method:'get'}); Adalah code Untuk Mengambil request get pada website yang ditujukan oleh parameter xurl
+
+4. document.getElementById("result").value=++x; Adalah code untuk menampilkan jumlah request yang telah dikirim
+
+5. function start_flood() adalah code untuk membuat function start_flood yang digunakan untuk memulai program yang di control dari tag <button onclick="xxx=setInterval(start_flood,100)">Start!</button> Dan <button onclick="clearInterval(xxx)">Stop</button> Untuk Menghetikan program
+
+6. var xurl=document.getElementById("url").value; adalah code untuk mengambil value dari tag html <input type="text" id="url">
+
+7. var total=document.getElementById("total").value; adalah code untuk mengambil value dari tag html <input type="text" id="total">
+
+8. flood(xurl,total); adalah kode untuk memanggil function flood degan parameter dari variable xurl dan total
+
+Link Download -> https://github.com/ICWR-TECH/JSDDOS
