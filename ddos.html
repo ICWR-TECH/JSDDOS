@@ -9,8 +9,8 @@
 
 	        for(i=0;i<total;i++){
 
-                fetch(xurl,{method:'get'});
-    	        document.getElementById("result").value=++x;
+                    fetch(xurl,{method:'get'});
+    	            document.getElementById("result").value=++x;
 
 	        }
 
@@ -19,7 +19,7 @@
         function start_flood(){
 
             var xurl=document.getElementById("url").value;
-	        var total=document.getElementById("total").value;
+	    var total=document.getElementById("total").value;
             flood(xurl,total);
 
         }
